@@ -1,8 +1,8 @@
 # SPEC — Ausschreibungsanalyse
 
 **Slug:** ausschreibungsanalyse
-**Iteration:** v1
-**Type:** new-app
+**Iteration:** v1.1
+**Type:** feature
 **Port:** 3108
 **Eingegangen:** 2026-05-31T07:29:00+02:00
 
@@ -120,11 +120,13 @@ Die wichtigsten Punkte müssen tabellarisch dargestellt werden, wo es der Lesbar
 
 Implementiere einen Provider-Abstraktionslayer für:
 
-- OpenAI: Chat Completions oder Responses API über `fetch`; Modellliste mit mindestens `gpt-4.1`, `gpt-4.1-mini`, `gpt-4o`, `gpt-4o-mini`.
-- Anthropic/Claude: Messages API über `fetch`; Modellliste mit mindestens `claude-sonnet-4-5`, `claude-haiku-4-5`, `claude-opus-4-1`.
-- Google Gemini: Generative Language API über `fetch`; Modellliste mit mindestens `gemini-2.5-pro`, `gemini-2.5-flash`, `gemini-2.0-flash`.
+- OpenAI: Chat Completions oder Responses API über `fetch`; Modellliste mit mindestens `gpt-5.5`, `gpt-5.4`.
+- Anthropic/Claude: Messages API über `fetch`; Modellliste mit mindestens `claude-sonnet-4-6`, `claude-opus-4-8`, `claude-opus-4-7`, `claude-opus-4-1-20250805`.
+- Google Gemini: Generative Language API über `fetch`; Modellliste mit mindestens `gemini-3-pro-preview`, `gemini-3-flash-preview`, `gemini-2.5-pro`.
 
 Die Modellliste muss im UI editierbar sein, damit Kevin ein anderes Modell manuell eintragen kann.
+
+Hinweis: Einige Frontier-Modelle können je nach API-Key/Account noch nicht freigeschaltet sein. Die App soll sie auswählbar machen, Provider-Fehler aber klar anzeigen und weiterhin manuelle Modell-IDs erlauben.
 
 Wenn Provider-Aufrufe im Test nicht möglich sind, muss die Analyse-Logik über eine Mock-Provider-Implementierung testbar sein.
 
