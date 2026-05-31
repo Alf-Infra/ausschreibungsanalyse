@@ -1,0 +1,11 @@
+node_modules/
+dist/
+uploads/
+tmp/
+*.log
+.DS_Store
+.app-state.json
+.codex-build.json
+.test-result.json
+.review-result.json
+.deploy-result.json
